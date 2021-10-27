@@ -1,1 +1,8 @@
+title: Li Wei's Blog
+description: Leap Day is a theme for GitHub Pages, this is another page.
+show_downloads: true
+google_analytics:
 theme: jekyll-theme-leap-day
+
+github:
+  repository_url: https://github.com/weili-git/
