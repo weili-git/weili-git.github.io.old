@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  Docker-Engine
+title:  Docker Engine
 date:   2021-10-26 12:57:11 +0800
 description: Quick start with a few docker commands
 # categories: Docker
@@ -64,10 +64,29 @@ other command
 docker run -d image-name    # run in background, which requires foreground process
 docker logs -tf --tail num container-id
 docker top container-id
-docker inspectcontainer-id
+docker inspect container-id
 ```
-## 3.6 exec
+## 3.6 exec && cp
 enter the running container
 ```shell
-docker exec -it container-id /bin/bash
+docker exec -it container-id /bin/bash  # create new terminal, recommend!!!
+docker attach container-id              # continue last terminal
+docker cp container-id:path host-path
+```
+# 4 DockerFile
+## 4.1 Instance
+```docker
+FROM ubuntu:18.04
+```
+## 4.2 Build
+```bash
+docker build -t image-name[:tag] .
+```
+## 4.3 Test
+```bash
+docker run -it image-name[:tag]
+```
+## 4.4 History
+``bash
+docker history image-id
 ```
