@@ -4,8 +4,8 @@ title:  Docker Engine
 date:   2021-10-26 12:57:11 +0800
 description: Quick start with a few docker commands
 date:  2021-10-26 12:57:11 +0800
-# categories: Docker
-# permalink: /:categories/:title
+categories: [article, linux]
+permalink: /:categories/:title
 ---
 
 # 1. Install Docker
@@ -17,6 +17,7 @@ sudo gpasswd -a ${USER} docker
 sudo service docker restart
 newgrp - docker
 ```
+
 # 2. Image Command
 ## 2.1 search
 We can search [Docker Hub](https://hub.docker.com/) to find docker images that we want. Alternatively, we can use the command 'search' to print a list of images based on arguments.
@@ -30,6 +31,7 @@ To delete images, we can use the command 'rmi'
 docker rmi -f image1-id image2-id ...
 docker rmi -f $(docker images -aq)     # delete all images
 ```
+
 # 3. Container Command
 ## 3.1 pull and run
 Docker container is a running instance of a docker image. Here are the basic commands.
@@ -74,6 +76,7 @@ docker exec -it container-id /bin/bash  # create new terminal, recommend!!!
 docker attach container-id              # continue last terminal
 docker cp container-id:path host-path
 ```
+
 # 4 DockerFile
 ## 4.1 Instance
 ```docker

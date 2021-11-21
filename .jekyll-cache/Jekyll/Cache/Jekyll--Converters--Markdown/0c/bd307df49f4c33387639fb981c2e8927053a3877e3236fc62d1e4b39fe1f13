@@ -1,0 +1,74 @@
+I"�<h1 id="1-install-docker">1. Install Docker</h1>
+<p>First, we need to install <a href="https://docs.docker.com/engine/install/ubuntu/">Docker Engine</a> according to the instructions on the official website. Then, for convenience, we can do the following to avoid typing ‘sudo’ each time.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat</span> /etc/group | <span class="nb">grep </span>docker
+<span class="nb">sudo </span>groupadd docker    <span class="c"># if no output</span>
+<span class="nb">sudo </span>gpasswd <span class="nt">-a</span> <span class="k">${</span><span class="nv">USER</span><span class="k">}</span> docker
+<span class="nb">sudo </span>service docker restart
+newgrp - docker
+</code></pre></div></div>
+
+<h1 id="2-image-command">2. Image Command</h1>
+<h2 id="21-search">2.1 search</h2>
+<p>We can search <a href="https://hub.docker.com/">Docker Hub</a> to find docker images that we want. Alternatively, we can use the command ‘search’ to print a list of images based on arguments.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker search image-name
+docker pull image-name <span class="o">[</span>:tag]      <span class="c"># specified version</span>
+</code></pre></div></div>
+<h2 id="22-delete">2.2 delete</h2>
+<p>To delete images, we can use the command ‘rmi’</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker rmi <span class="nt">-f</span> image1-id image2-id ...
+docker rmi <span class="nt">-f</span> <span class="si">$(</span>docker images <span class="nt">-aq</span><span class="si">)</span>     <span class="c"># delete all images</span>
+</code></pre></div></div>
+
+<h1 id="3-container-command">3. Container Command</h1>
+<h2 id="31-pull-and-run">3.1 pull and run</h2>
+<p>Docker container is a running instance of a docker image. Here are the basic commands.</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull ubuntu:18.04
+docker run <span class="nt">-it</span> ubuntu:18.04 /bin/bash   <span class="c"># interaction mode</span>
+<span class="nb">exit</span>        <span class="c"># stop and exit</span>
+ctrl+p+q    <span class="c"># stop but still running</span>
+</code></pre></div></div>
+<h2 id="32-ps">3.2 ps</h2>
+<p>list all of the running containers</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps <span class="nt">-aq</span>      <span class="c"># show all and history containers with id only</span>
+</code></pre></div></div>
+<h2 id="33-remove">3.3 remove</h2>
+<p>remove docker container</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker <span class="nb">rm </span>container-id
+docker <span class="nb">rm</span> <span class="nt">-f</span> <span class="si">$(</span>docker ps <span class="nt">-aq</span><span class="si">)</span>      <span class="c"># force to remove all of the running containers</span>
+docker ps <span class="nt">-aq</span>|xargs docker <span class="nb">rm</span>      <span class="c"># another way to remove</span>
+</code></pre></div></div>
+<h2 id="34-start-and-stop">3.4 start and stop</h2>
+<p>start and stop the container</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker start container-id
+docker restart container-id
+docker stop container-id
+docker <span class="nb">kill </span>container-id   <span class="c"># force to stop</span>
+</code></pre></div></div>
+<h2 id="35-others">3.5 others</h2>
+<p>other command</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-d</span> image-name    <span class="c"># run in background, which requires foreground process</span>
+docker logs <span class="nt">-tf</span> <span class="nt">--tail</span> num container-id
+docker top container-id
+docker inspect container-id
+</code></pre></div></div>
+<h2 id="36-exec--cp">3.6 exec &amp;&amp; cp</h2>
+<p>enter the running container</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker <span class="nb">exec</span> <span class="nt">-it</span> container-id /bin/bash  <span class="c"># create new terminal, recommend!!!</span>
+docker attach container-id              <span class="c"># continue last terminal</span>
+docker <span class="nb">cp </span>container-id:path host-path
+</code></pre></div></div>
+
+<h1 id="4-dockerfile">4 DockerFile</h1>
+<h2 id="41-instance">4.1 Instance</h2>
+<div class="language-docker highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> ubuntu:18.04</span>
+</code></pre></div></div>
+<h2 id="42-build">4.2 Build</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build <span class="nt">-t</span> image-name[:tag] <span class="nb">.</span>
+</code></pre></div></div>
+<h2 id="43-test">4.3 Test</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-it</span> image-name[:tag]
+</code></pre></div></div>
+<h2 id="44-history">4.4 History</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker <span class="nb">history </span>image-id
+</code></pre></div></div>
+:ET

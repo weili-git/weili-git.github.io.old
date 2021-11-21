@@ -6,3 +6,5 @@ theme: jekyll-theme-leap-day
 
 github:
   repository_url: https://github.com/weili-git/
+
+categories: [algorithm, article, deep-learning, linux]

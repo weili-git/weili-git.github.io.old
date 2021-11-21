@@ -1,10 +1,15 @@
-I"û<h1 id="navigation-list">Navigation List</h1>
+I"4<h1 id="navigation-list">Navigation List</h1>
 <ul>
   <li>
     <s>publish time</s>
   </li>
+  <li>
+    <s>drop useless item</s>
+  </li>
+  <li>
+    <s>navigation link</s>
+  </li>
   <li>page support</li>
-  <li>drop useless item</li>
 </ul>
 
 <h1 id="categories">Categories</h1>
