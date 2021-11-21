@@ -5,7 +5,8 @@ description: This website still needs revision.
 ---
 
 # Navigation List
-* publish time
+* <s>publish time</s>
+* sorted by time
 * page support
 * drop useless item
 

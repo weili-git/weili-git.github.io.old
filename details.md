@@ -2,6 +2,7 @@
 layout: default
 title: Details
 description: Here are some examples on how to use this jekyll theme.
+date:  2021-10-26 12:57:11 +0800
 ---
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.

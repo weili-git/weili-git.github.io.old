@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
 
 {% seo %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
@@ -46,12 +47,22 @@
       </nav>
       <section>
 
-        {% for page1 in site.pages %}
-          <h1>{{ page1.title }}</h1>{{ page1.description }} <a href="{{ page1.url }}">>>Read More</a> <br>
-        {% endfor %}
         
+          {% for page_ in site.pages %}
+          <div style="margin-bottom: 20px;">
+            <h1>{{ page_.title }}</h1>
+            {% if page_.date != nil %}
+            <div>
+              <i class="fa fa-calendar"></i> {{ page_.date | date: "%b %-d, %Y" }}
+            </div>
+            {% endif %}
+            {{ page_.description }} <a href="{{ page_.url }}">>>Read More</a> <br>
+          </div>
+          {% endfor %}
+        
+
         {{ content }}
-        
+
       </section>
       <footer>
         {% if site.github.is_project_page %}

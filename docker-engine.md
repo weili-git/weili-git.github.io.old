@@ -3,6 +3,7 @@ layout: default
 title:  Docker Engine
 date:   2021-10-26 12:57:11 +0800
 description: Quick start with a few docker commands
+date:  2021-10-26 12:57:11 +0800
 # categories: Docker
 # permalink: /:categories/:title
 ---
@@ -87,6 +88,6 @@ docker build -t image-name[:tag] .
 docker run -it image-name[:tag]
 ```
 ## 4.4 History
-``bash
+```bash
 docker history image-id
 ```

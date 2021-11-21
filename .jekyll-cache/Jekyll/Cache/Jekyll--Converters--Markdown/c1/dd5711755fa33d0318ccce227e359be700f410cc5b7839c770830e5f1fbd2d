@@ -1,77 +1,4 @@
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-<!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>About | Li Wei’s Blog</title>
-<meta name="generator" content="Jekyll v4.2.1" />
-<meta property="og:title" content="About" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="This is just the content of README.md" />
-<meta property="og:description" content="This is just the content of README.md" />
-<link rel="canonical" href="http://localhost:4000/README.html" />
-<meta property="og:url" content="http://localhost:4000/README.html" />
-<meta property="og:site_name" content="Li Wei’s Blog" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="About" />
-<script type="application/ld+json">
-{"@type":"WebPage","url":"http://localhost:4000/README.html","headline":"About","description":"This is just the content of README.md","@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
-
-    <link rel="stylesheet" href="/assets/css/style.css?v=">
-    <script src="https://code.jquery.com/jquery-3.3.0.min.js" integrity="sha256-RTQy8VOmNlT6b2PIRur37p6JEBZUE7o8wPgMvu18MC4=" crossorigin="anonymous"></script>
-    <script src="/assets/js/main.js"></script>
-    <!--[if lt IE 9]>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
-
-<!-- Setup Google Analytics -->
-
-
-
-<!-- You can set your favicon here -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
-
-<!-- end custom head snippets -->
-
-  </head>
-  <body>
-
-      <header>
-        <h1>About</h1>
-        <p>This is just the content of README.md</p>
-      </header>
-
-      <div id="banner">
-        <span id="logo"></span>
-
-        <a href="https://github.com/weili-git/" class="button fork"><strong>View On GitHub</strong></a>
-        
-          <div class="downloads">
-            <span>Link:</span>
-            <ul>
-              <!-- <li><a href="" class="button">Text-To-Speech</a></li>
-              <li><a href="" class="button">Docker</a></li> -->
-              <li><a href="./README.html" class="button">About</a></li>
-              <li><a href="./" class="button">Home</a></li>
-              
-            </ul>
-          </div>
-        
-      </div><!-- end banner -->
-
-    <div class="wrapper">
-      <nav>
-        <ul></ul>
-      </nav>
-      <section>
-
-        <h1 id="the-leap-day-theme">The Leap day theme</h1>
+I"�%<h1 id="the-leap-day-theme">The Leap day theme</h1>
 
 <p><a href="https://github.com/pages-themes/leap-day/actions/workflows/ci.yaml"><img src="https://github.com/pages-themes/leap-day/actions/workflows/ci.yaml/badge.svg" alt=".github/workflows/ci.yaml" /></a> <a href="https://badge.fury.io/rb/jekyll-theme-leap-day"><img src="https://badge.fury.io/rb/jekyll-theme-leap-day.svg" alt="Gem Version" /></a></p>
 
@@ -196,13 +123,4 @@
 <h3 id="running-tests">Running tests</h3>
 
 <p>The theme contains a minimal test suite, to ensure a site with the theme would build successfully. To run the tests, simply run <code class="language-plaintext highlighter-rouge">script/cibuild</code>. You’ll need to run <code class="language-plaintext highlighter-rouge">script/bootstrap</code> once before the test script will work.</p>
-
-
-      </section>
-      <footer>
-        
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></small></p>
-      </footer>
-    </div>
-  </body>
-</html>
+:ET
