@@ -4,32 +4,42 @@ title: Categories
 description: Categorize all the articles
 ---
 
-<h1>article</h1>
+<!-- <h1>article</h1>
 {% for page in site.posts %}
     {% if page.categories contains 'article' %}
         <div>
             <span style="padding-right: 5px;">
                 <i class="fa fa-calendar"></i> {{ page.date | date: "%b %-d, %Y" }}
             </span>
-            
+            <span>
                 <a href="{{ page.url }}">{{page.title}}</a>
             </span>
         </div>
     {% endif %}
-{% endfor %}<br>
+{% endfor %}<br> -->
 
-<h1>linux</h1>
-{% for page in site.posts %}
-    {% if page.categories contains 'linux' %}
-        <div>
-            <span style="padding-right: 5px;">
-                <i class="fa fa-calendar"></i> {{ page.date | date: "%b %-d, %Y" }}
-            </span>
-            <span style="padding-left: 5px;">
-                <a href="{{ page.url }}">{{page.title}}</a>
-            </span>
-        </div>
-    {% endif %}
-{% endfor %}<br>
 
-https://www.itranslater.com/qa/details/2582489303695754240
+
+
+{% for cat in site.categories %}
+    <div style="margin-bottom: 20px;">
+        <a class="post-tag" href="./{{cat | first}}">#{{cat | first}} ({{ cat | last | size }})</a>
+        {% for post in cat.last %}
+            <div>
+                <span style="padding-right: 5px;">
+                    <i class="fa fa-calendar"></i> {{ post.date | date: "%b %-d, %Y" }}
+                </span>
+                <span>
+                    <a href="{{ post.url }}">{{post.title}}</a>
+                </span>
+            </div>
+        {% endfor %}
+    </div>
+{% endfor %}
+
+<!-- https://www.itranslater.com/qa/details/2582489303695754240
+https://segmentfault.com/a/1190000000406017 -->
+
+<!-- * 使用{{ category | first }}输出分类的名称
+* 使用{{ category | last | size }}输出该分类下文章的数目
+* 遍历category.last输出所有文章的信息，构建到该文章的索引 -->

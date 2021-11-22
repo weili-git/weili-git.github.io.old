@@ -1,9 +1,0 @@
-I"!<h1 id="1-install-docker">1. Install Docker</h1>
-<p>First, we need to install <a href="https://docs.docker.com/engine/install/ubuntu/">Docker Engine</a> according to the instructions on the official website. Then, for convenience, we can do the following to avoid typing ‘sudo’ each time.</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat</span> /etc/group | <span class="nb">grep </span>docker
-<span class="nb">sudo </span>groupadd docker    <span class="c"># if no output</span>
-<span class="nb">sudo </span>gpasswd <span class="nt">-a</span> <span class="k">${</span><span class="nv">USER</span><span class="k">}</span> docker
-<span class="nb">sudo </span>service docker restart
-newgrp - docker
-</code></pre></div></div>
-:ET

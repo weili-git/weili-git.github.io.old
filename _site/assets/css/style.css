@@ -320,4 +320,10 @@ footer { width: 180px; position: fixed; left: 50%; margin-left: -530px; bottom: 
 
 @media print, screen and (max-height: 480px) { nav { display: none; } footer { text-align: center; margin: 20px auto; position: relative; left: auto; bottom: auto; width: auto; } }
 
+.post-tag { display: inline-block; text-decoration: none; border: 1px solid; padding: 2px 4px; border-radius: 2px; transition: color 0.2s; margin-bottom: 8px; }
+
+.post-tag:not(:last-child) { margin-right: 8px; }
+
+.post-tag:hover { color: #787878; }
+
 /*# sourceMappingURL=style.css.map */

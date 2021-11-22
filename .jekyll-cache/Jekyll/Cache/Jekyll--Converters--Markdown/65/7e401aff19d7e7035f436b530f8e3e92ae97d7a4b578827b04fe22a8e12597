@@ -1,4 +1,4 @@
-I"e<h1 id="homepage">Homepage</h1>
+I"§<h1 id="homepage">Homepage</h1>
 <ul>
   <li>
     <s>publish time</s>
@@ -18,9 +18,14 @@
 
 <h1 id="categories">Categories</h1>
 <ul>
-  <li>list by cat</li>
-  <li>crud of cat</li>
-  <li>count by cat</li>
+  <li>
+    <s>list by cat</s>
+  </li>
+  <li>
+    <s>count by cat</s>
+  </li>
+  <li>sidebar</li>
 </ul>
 
+<h1 id="in-progress">In progress..</h1>
 :ET
