@@ -1,11 +1,10 @@
 ---
 layout: default
 title:  Docker Engine
-date:   2021-10-26 12:57:11 +0800
 description: Quick start with a few docker commands
 date:  2021-10-26 12:57:11 +0800
 categories: [article, linux]
-permalink: /:categories/:title
+permalink: /:title    # permalink: /:categories/:title
 ---
 
 # 1. Install Docker

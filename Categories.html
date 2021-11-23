@@ -4,26 +4,10 @@ title: Categories
 description: Categorize all the articles
 ---
 
-<!-- <h1>article</h1>
-{% for page in site.posts %}
-    {% if page.categories contains 'article' %}
-        <div>
-            <span style="padding-right: 5px;">
-                <i class="fa fa-calendar"></i> {{ page.date | date: "%b %-d, %Y" }}
-            </span>
-            <span>
-                <a href="{{ page.url }}">{{page.title}}</a>
-            </span>
-        </div>
-    {% endif %}
-{% endfor %}<br> -->
-
-
-
-
 {% for cat in site.categories %}
     <div style="margin-bottom: 20px;">
-        <a class="post-tag" href="./{{cat | first}}">#{{cat | first}} ({{ cat | last | size }})</a>
+        <h1 style="display: inline; padding-right: 10px;">{{cat | first}}</h1>
+        <a style="font-size: medium; color: gray;" >Total {{ cat | last | size }}</a>
         {% for post in cat.last %}
             <div>
                 <span style="padding-right: 5px;">

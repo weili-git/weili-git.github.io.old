@@ -31,3 +31,4 @@ $(function() {
 
   $('img').on('load', sectionHeight);
 });
+
