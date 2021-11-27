@@ -7,3 +7,6 @@ theme: jekyll-theme-leap-day
 github:
   repository_url: https://github.com/weili-git/
 
+markdown: kramdown
+kramdown:
+  math_engine: katex
