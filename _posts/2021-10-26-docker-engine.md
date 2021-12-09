@@ -3,7 +3,7 @@ layout: default
 title:  Docker Engine
 description: Quick start with a few docker commands
 date:  2021-10-26 12:57:11 +0800
-categories: [article, linux]
+categories: [Article, Linux]
 permalink: /:title    # permalink: /:categories/:title
 ---
 
