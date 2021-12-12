@@ -17,7 +17,7 @@ Extract information from 4 different paths, and then concatenate them in output 
 
 # 2. Architecture
 
-![](2021-12-12-1.png)
+![GoogLeNet](/assets/images/2021-12-12-1.png)
 
 You can see that there are so many hyper-parameters (num of channels). So it has limited use.
 
