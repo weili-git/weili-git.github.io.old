@@ -73,29 +73,32 @@ $$X = [x_1, x_2, ..., x_n]$$
 
 then
 
-$$Y = [\frac{e^{x_1}}{\sum_{i=1}^{n}e^{x_i}}, \frac{e^{x_2}}{\sum_{i=1}^{n}e^{x_i}}, ..., \frac{e^{x_n }}{\sum_{i=1}^{n}e^{x_i}}] = [y_1, y_2, ..., y_n] = \frac{exp(X)}{\bold1^Texp(X)}$$
+$$Y = [\frac{e^{x_1}}{\sum_{i=1}^{n}e^{x_i}}, \frac{e^{x_2}}{\sum_{i=1}^{n}e^{x_i}}, ..., \frac{e^{x_n }}{\sum_{i=1}^{n}e^{x_i}}] = [y_1, y_2, ..., y_n] = \frac{exp(X)}{1^Texp(X)}$$
 
 if we use the Cross Entropy Loss, then
 
-$$loss = -\hat Y^Tlog(Y) = -\hat Y^Tlog(Wx-\bold1log(\bold1^Texp(Wx))) = -\hat Y^TWx+log(1^Texp(Wx))$$
+$$loss = -\hat Y^Tlog(Y) = -\hat Y^Tlog(Wx-1log(1^Texp(Wx))) = -\hat Y^TWx+log(1^Texp(Wx))$$
 
 where
-$$\hat Y^T\bold1 = 1$$
+$$\hat Y^T1 = 1$$
 and since
 
 $$d\sigma(X)=\sigma^{'}(X)\odot dX$$
+and
 $$tr(A^T(B\odot C)) = tr((A\odot B)^TC)$$
 
 we have
 
-$$dloss = -\hat Y^TdWx + \frac{\bold1^T(exp(Wx)\odot(dWx))}{\bold1^Texp(Wx)} = -\hat Y^TdWx + \frac{exp(Wx)^TdWx}{\bold1^Texp(Wx)}$$
+$$dloss = -\hat Y^TdWx + \frac{1^T(exp(Wx)\odot(dWx))}{1^Texp(Wx)} = -\hat Y^TdWx + \frac{exp(Wx)^TdWx}{1^Texp(Wx)}$$
 
 $$= tr(-\hat Y^TdWx+softmax(Wx)^TdWx)=tr(x(softmax(Wx)-\hat Y)^TdW)$$
 
 thus
 
 $$\frac{\partial loss}{\partial W} = (softmax(Wx)-\hat Y)x^T$$
+
 or
+
 $$a=Wx,\frac{\partial loss}{\partial a} = softmax(a)-\hat Y$$
 
 on the other hand, 
