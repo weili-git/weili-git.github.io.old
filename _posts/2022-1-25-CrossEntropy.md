@@ -67,11 +67,11 @@ It is used to represent the difference of two distribution.
 
 # 3. Softmax & Logistic Regression
 
-set
+For classification problems, supposed that we have an output from some neural network
 
 $$X = [x_1, x_2, ..., x_n]$$
 
-then
+then we can obtain the output probability by softmax
 
 $$Y = [\frac{e^{x_1}}{\sum_{i=1}^{n}e^{x_i}}, \frac{e^{x_2}}{\sum_{i=1}^{n}e^{x_i}}, ..., \frac{e^{x_n }}{\sum_{i=1}^{n}e^{x_i}}] = [y_1, y_2, ..., y_n] = \frac{exp(X)}{1^Texp(X)}$$
 
@@ -79,12 +79,12 @@ if we use the Cross Entropy Loss, then
 
 $$loss = -\hat Y^Tlog(Y) = -\hat Y^Tlog(Wx-1log(1^Texp(Wx))) = -\hat Y^TWx+log(1^Texp(Wx))$$
 
-where
-$$\hat Y^T1 = 1$$
-and since
+where$$\hat Y^T1 = 1$$and since
 
 $$d\sigma(X)=\sigma^{'}(X)\odot dX$$
+
 and
+
 $$tr(A^T(B\odot C)) = tr((A\odot B)^TC)$$
 
 we have
