@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Signals and Systems <2>
-description: 信号与系统 <2>
+title: Signal's Convolution
+description: 信号的卷积运算
 date: 2022-2-9 10:35:00 +0800
 categories: [Signals and Systems]
 permalink: /:title    # permalink: /:categories/:title
