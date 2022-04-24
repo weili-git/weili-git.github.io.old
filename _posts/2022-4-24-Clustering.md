@@ -9,7 +9,7 @@ permalink: /:title    # permalink: /:categories/:title
 
 # 1. What's the clustering
 
-Formally, suppose that we have a dataset $$D=\{x_1,x_2,...,x_m\}$$, in which every sample is a n-dim vector. Clustering is to divide these data into k disjoint 'cluster' $$\{C_l|l=1,2,...,k\}$$. This is just like 'Disjoint Set' that we learn in algorithm course.
+Formally, suppose that we have a dataset $$D=\{x_1,x_2,...,x_m\}$$, in which every sample is a n-dim vector. Clustering is to divide these data into k disjoint 'cluster' $$\{C_l \| l=1,2,...,k\}$$. This is just like 'Disjoint Set' that we learn in algorithm course.
 
 # 2. K-means
 
@@ -18,13 +18,17 @@ The intuition of K-means algorithm is very straight-forward. Initially, we choos
 For example, suppose that we have a dataset $$D=\{x_1,x_2,...,x_7\}$$, and we initially select $$\{ \mu_1, \mu_2, \mu_3 \} = \{ x_1, x_4, x_6\}$$, and then we obtain a division,
 
 $$C_1 = \{x_1, x_2, x_5\}$$
+
 $$C_2 = \{x_4, x_7\}$$
+
 $$C_3 = \{x_3, x_6\}$$
 
 Then, we calculate the new 'mean vector'.
 
 $$\mu_1^*=\frac{1}{3}(x_1+x_2+x_5)$$
+
 $$\mu_2^*=\frac{1}{2}(x_4+x_7)$$
+
 $$\mu_3^*=\frac{1}{2}(x_3+x_6)$$
 
 Repeat the process above, we'll have a good 'mean vector', which can denote the center position of each cluster.
