@@ -17,10 +17,13 @@ Fill the input into size kernel-1, then apply Transposed kernel Conv (主副对�
 
 # 3. General Case
 
-Insert strd lines between rows/cols , then fill the input into size kernel-padding-1, then Transposed kernel Conv (k, 1, 0)
+Insert stride lines between rows/cols , then fill the input into size kernel-padding-1, then Transposed kernel Conv (k, 1, 0)
 
-$$n` = (n-1)s + k - 2p$$
+ConvTranspose2d
 
-where for Conv
 
-$$n` = floor( (n -k + 2p + s)/s )$$
+$$n^* = (n-1)s + k - 2p$$
+
+Conv2d
+
+$$n^* = floor( \frac{n -k + 2p + s}{s} )$$
