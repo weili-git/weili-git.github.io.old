@@ -7,7 +7,7 @@ categories: [Deep-learning]
 permalink: /:title    # permalink: /:categories/:title
 ---
 
-# 1. What's the clustering
+# 1. Definition
 
 Formally, suppose that we have a dataset $$D=\{x_1,x_2,...,x_m\}$$, in which every sample is a n-dim vector. Clustering is to divide these data into k disjoint 'cluster' $$\{C_l \| l=1,2,...,k\}$$. This is just like 'Disjoint Set' that we learn in algorithm course.
 
