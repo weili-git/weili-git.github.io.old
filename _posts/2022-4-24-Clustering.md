@@ -33,5 +33,5 @@ $$\mu_3^*=\frac{1}{2}(x_3+x_6)$$
 
 Repeat the process above, we'll have a good 'mean vector', which can denote the center position of each cluster.
 
-
+# Outliers, Initial centroids
 
