@@ -35,3 +35,6 @@ Repeat the process above, we'll have a good 'mean vector', which can denote the 
 
 # Outliers, Initial centroids
 
+# KNN
+
+Time complexity is related to the size of data.
