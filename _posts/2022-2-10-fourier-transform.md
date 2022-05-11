@@ -205,3 +205,9 @@ page 142
 # 8. Inverse Transform
 
 $$x(t)=\frac{1}{2\pi}\int_{-\infty}^{+\infty}F(\omega)e^{j\omega t}dt$$
+
+# 9. Generalized Transform
+
+we define
+
+$$\delta(t) \leftrightarrow 1$$

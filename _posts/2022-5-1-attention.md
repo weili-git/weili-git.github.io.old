@@ -11,9 +11,11 @@ permalink: /:title    # permalink: /:categories/:title
 
 There're 3 inputs Q(query), K(key), V(value) for attention mechanism. If Q=K=V, we call it 'self-attention'. Also, there're several rules to calculate it.
 
-$$Attention(Q,K,V) = Softmax(Linear([Q,K])) \cdot V \\
-Attention(Q,K,V) = Softmax(sum(\tanh(Linear([Q,K])))) \cdot V \\
-Attention(Q,K,V) = Softmax(\frac{Q \cdot K^T}{\sqrt{d_k}}) \cdot V$$
+$$Attention(Q,K,V) = Softmax(Linear([Q,K])) \cdot V$$
+
+$$Attention(Q,K,V) = Softmax(sum(\tanh(Linear([Q,K])))) \cdot V$$
+
+$$Attention(Q,K,V) = Softmax(\frac{Q \cdot K^T}{\sqrt{d_k}}) \cdot V$$
 
 The 'bmm' is a special tensor multiply operation, batch matrices multiplication.
 

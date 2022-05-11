@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Signals and Systems <1>
-description: 信号与系统 <1>
+title: Signal's Properties
+description: 信号的性质
 date: 2022-2-8 19:58:00 +0800
 categories: [Signals and Systems]
 permalink: /:title    # permalink: /:categories/:title
@@ -31,7 +31,9 @@ $$\frac{T_1}{T_2}=\frac{p}{q}\in Q$$
 
 # 2. Sifting Property
 
+note that $$\forall \lambda \neq t_1, \delta(\lambda-t_1)=0$$
 
+it follows that
 
 $$\int_{-\infty}^{+\infty}f(\lambda)\delta(\lambda-t_1)d\lambda=\int_{t_1-\epsilon}^{t_1+\epsilon}f(\lambda)\delta(\lambda-t_1)d\lambda=f(t_1)$$
 
